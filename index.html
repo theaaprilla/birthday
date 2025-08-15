@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayangku</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="notebook-background">
+        <div class="cat-doll">
+            <div class="cat-head">
+                <div class="cat-ear left-ear"></div>
+                <div class="cat-ear right-ear"></div>
+                <div class="cat-face">
+                    <div class="cat-eye left-eye"></div>
+                    <div class="cat-eye right-eye"></div>
+                    <div class="cat-nose"></div>
+                    <div class="cat-mouth"></div>
+                </div>
+            </div>
+            <div class="cat-body"></div>
+            <div class="cat-paw left-paw"></div>
+            <div class="cat-paw right-paw"></div>
+        </div>
+
+        <div class="slide-container">
+            <!-- Slide 1 -->
+            <div class="slide active" id="slide1">
+                <h1 class="birthday-title">Happy Birthday</h1>
+                <h2 class="birthday-subtitle">Sayangku</h2>
+                <p class="birthday-name">Zakwan Ramadhia Zulfa</p>
+                <button class="next-btn" onclick="nextSlide()">Klik untuk melanjutkan 💝</button>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" id="slide2">
+                <div class="message-container">
+                    <p class="birthday-message">
+                        Sayangku happy birthday yaa..<br>
+                        Semoga apa yang kamu usahakan hari ini<br>
+                        bisa bahagia buat masa depan kamu..
+                    </p>
+                    <button class="next-btn" onclick="nextSlide()">Lanjut cerita 💕</button>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" id="slide3">
+                <div class="message-container">
+                    <p class="heartfelt-message">
+                        Tapi aku mau cerita sama kamu..<br>
+                        <span class="highlight">Kamu tuh yang paling nguji kesabaran aku</span><br>
+                        yang setipis tisu ini gampang banget<br>
+                        buat aku marah gara-gara kamu 😤
+                    </p>
+                    <div class="reasons">
+                        <p><strong>Pertama:</strong> Kamu ga peka</p>
+                        <p><strong>Kedua:</strong> Ga mau dengerin omongan aku</p>
+                        <p><strong>Ketiga:</strong> Selalu mengulangi kesalahan yang sama</p>
+                    </div>
+                    <button class="next-btn" onclick="nextSlide()">Tapi tunggu dulu.. 💗</button>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" id="slide4">
+                <div class="message-container">
+                    <p class="positive-message">
+                        <span class="big-but">TAPIII</span><br>
+                        Kamu juga <strong>baik</strong> 💝<br>
+                        Kamu <strong>pekerja keras</strong> 💪<br>
+                        Kamu <strong>pinter</strong> 🧠<br>
+                        Kamu <strong>hebat</strong> ⭐<br>
+                        Apalagi sekarang mau kerja <strong>jauhhh banget</strong> ✈️
+                    </p>
+                    <p class="encouragement">
+                        Tapi ga semua orang bisa di titik kamu.<br>
+                        <span class="big-text">Good job bebekuuuu 💕</span>
+                    </p>
+                    <p class="signature">(buat dan love)</p>
+                    <button class="restart-btn" onclick="restartSlides()">Ulangi 💝</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="notebook-lines"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

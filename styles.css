@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kalam', cursive;
+    background: #8B4513;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.notebook-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #D2691E 0%, #8B4513 100%);
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 24px,
+            rgba(139, 69, 19, 0.1) 25px,
+            rgba(139, 69, 19, 0.1) 26px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 24px,
+            rgba(139, 69, 19, 0.1) 25px,
+            rgba(139, 69, 19, 0.1) 26px
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notebook-lines {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 2px;
+    height: 100%;
+    background: #CD853F;
+    box-shadow: 80px 0 0 #CD853F, 160px 0 0 #CD853F, 240px 0 0 #CD853F;
+}
+
+/* Cat Doll */
+.cat-doll {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 120px;
+    height: 150px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.cat-head {
+    width: 80px;
+    height: 70px;
+    background: #FFB6C1;
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.cat-ear {
+    position: absolute;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #FFB6C1;
+}
+
+.left-ear {
+    left: 10px;
+    transform: rotate(-30deg);
+}
+
+.right-ear {
+    right: 10px;
+    transform: rotate(30deg);
+}
+
+.cat-face {
+    position: relative;
+    top: 20px;
+}
+
+.cat-eye {
+    width: 8px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+}
+
+.left-eye { left: 20px; }
+.right-eye { right: 20px; }
+
+.cat-nose {
+    width: 6px;
+    height: 4px;
+    background: #FF69B4;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cat-mouth {
+    width: 20px;
+    height: 10px;
+    border: 2px solid #333;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cat-body {
+    width: 60px;
+    height: 80px;
+    background: #FFB6C1;
+    border-radius: 50% 50% 40% 40%;
+    margin: -10px auto 0;
+}
+
+.cat-paw {
+    width: 20px;
+    height: 25px;
+    background: #FFB6C1;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+}
+
+.left-paw { left: 20px; }
+.right-paw { right: 20px; }
+
+/* Slide Container */
+.slide-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography */
+.birthday-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5em;
+    color: #8B0000;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+
+.birthday-subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #A0522D;
+    margin-bottom: 20px;
+}
+
+.birthday-name {
+    font-size: 2em;
+    color: #654321;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.message-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.birthday-message, .heartfelt-message, .positive-message {
+    font-size: 1.4em;
+    line-height: 1.8;
+    color: #2F4F4F;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #DC143C;
+    font-weight: bold;
+}
+
+.reasons {
+    background: rgba(255, 182, 193, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.reasons p {
+    font-size: 1.2em;
+    color: #8B4513;
+    margin: 10px 0;
+}
+
+.big-but {
+    font-size: 2em;
+    color: #FF1493;
+    font-weight: bold;
+}
+
+.encouragement {
+    font-size: 1.3em;
+    color: #228B22;
+    margin: 20px 0;
+}
+
+.big-text {
+    font-size: 1.5em;
+    color: #FF6347;
+    font-weight: bold;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    color: #8B008B;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.next-btn, .restart-btn {
+    background: linear-gradient(135deg, #FF69B4, #FF1493);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+    font-family: 'Kalam', cursive;
+}
+
+.next-btn:hover, .restart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+
+.next-btn:active, .restart-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .birthday-title {
+        font-size: 2.5em;
+    }
+    
+    .birthday-subtitle {
+        font-size: 2em;
+    }
+    
+    .birthday-name {
+        font-size: 1.5em;
+    }
+    
+    .message-container {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .cat-doll {
+        width: 80px;
+        height: 100px;
+        right: 20px;
+    }
+    
+    .cat-head {
+        width: 60px;
+        height: 50px;
+    }
+}
